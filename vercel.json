@@ -3,11 +3,7 @@
     "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.1",
-            "config": {
-                "maxDuration": 60,
-                "includeFiles": ["public/**", "config/**", "app/**", "bootstrap/**", "database/**", "routes/**", "vendor/**", "packages/**"]
-            }
+            "runtime": "vercel-php@0.7.1"
         }
     },
     "routes": [
