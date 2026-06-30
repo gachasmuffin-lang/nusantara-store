@@ -15,7 +15,7 @@ class AttributeGroupTableSeeder extends Seeder
      */
     public function run($parameters = [])
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::statement("SET session_replication_role = 'replica';");
 
         DB::table('attribute_groups')->delete();
 
@@ -255,6 +255,6 @@ class AttributeGroupTableSeeder extends Seeder
             ],
         ]);
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::statement("SET session_replication_role = 'origin';");
     }
 }
